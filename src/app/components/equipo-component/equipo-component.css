@@ -1,0 +1,12 @@
+/* Transición suave para cuando entra y sale el ratón */
+.team-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Efecto al pasar el ratón por encima (hover) */
+.team-card:hover {
+    transform: translateY(-8px);
+    /* La tarjeta se eleva 8 píxeles hacia arriba */
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15) !important;
+    /* Se vuelve más sombreada y flotante */
+}

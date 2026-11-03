@@ -19,6 +19,7 @@
     "@angular/router": "^22.2.0",
     "jspdf": "^4.2.1",
     "jspdf-autotable": "^5.0.9",
+    "ngx-yet-another-toast-library": "^22.1.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },

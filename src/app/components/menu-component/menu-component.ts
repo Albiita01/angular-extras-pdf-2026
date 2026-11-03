@@ -6,4 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './menu-component.css',
   templateUrl: './menu-component.html',
 })
-export class MenuComponent {}
+export class MenuComponent {
+
+  logoutEmpleado(): void {
+    sessionStorage.removeItem("TOKEN");
+  }
+}

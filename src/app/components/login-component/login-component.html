@@ -1,0 +1,41 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            <!-- Tarjeta contenedora de Login -->
+            <div class="card shadow-sm border-0 rounded-4 p-4">
+                <div class="card-body">
+
+                    <h1 class="text-center fw-bold text-primary mb-4">Log In</h1>
+
+                    <form #formlogin="ngForm">
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">User name:</label>
+                            <input type="text" name="cajauser" #cajauser class="form-control"
+                                placeholder="Introduce tu usuario" />
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold">Password:</label>
+                            <input type="password" name="cajapassword" #cajapassword class="form-control"
+                                placeholder="Introduce tu contraseña" />
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="button" class="btn btn-primary fw-semibold py-2" (click)="logInEmpleado()">
+                                <i class="bi bi-box-arrow-in-right me-1"></i> Log In
+                            </button>
+                        </div>
+                    </form>
+
+                    @if (mensaje) {
+                    <div class="alert alert-info mt-4 text-center mb-0" role="alert">
+                        {{mensaje}}
+                    </div>
+                    }
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
