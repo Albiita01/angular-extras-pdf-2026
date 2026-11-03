@@ -1,9 +1,10 @@
-import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { HttpClient, HttpContext, HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { environment } from "../../environments/environment.development";
 import { firstValueFrom, Observable } from "rxjs";
 import { Login } from "../models/login";
 import { Empleado } from "../models/empleado";
+import { SKIP_TOKEN } from "../utils/token.context";
 
 @Injectable()
 export class ServiceEmpleados {
@@ -16,7 +17,10 @@ export class ServiceEmpleados {
         let header = new HttpHeaders()
             .set("content-type", "application/json");
         return firstValueFrom(
-            this._http.post(this.url + request, json, { headers: header })
+            this._http.post(this.url + request, json, {
+                headers: header,
+                context: new HttpContext().set(SKIP_TOKEN, true)
+            })
         )
     }
 

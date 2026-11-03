@@ -36,9 +36,7 @@ import { authTokenInterceptor } from './interceptors/auth-token-interceptor';
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideToastService(),
-    provideHttpClient(withInterceptors([authTokenInterceptor])),
-    // El antiguo de errores
-    // provideHttpClient(withInterceptors([errorInterceptor])),
+    provideHttpClient(withInterceptors([errorInterceptor, authTokenInterceptor])),
     ServicePostFiles,
     ServiceEquipos,
     ServiceEmpleados
