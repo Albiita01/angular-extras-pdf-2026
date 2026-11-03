@@ -1,0 +1,8 @@
+<h1>Upload Api Files</h1>
+<form #form="ngForm">
+    <label>Seleccione una imagen</label>
+    <input type="file" name="cajafile" #cajafile class="form-control">
+    <button (click)="uploadFile()" class="btn btn-info">Upload file</button>
+</form>
+<img src="{urlFile}" style="width: 150px; height: 150px;" />
+<h2 style="color: blue;">{{mensaje}}</h2>
